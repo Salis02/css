@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        .border-radius{
+            width: 400px;
+            height: 400px;
+            background-image: url(../img/images.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: yellow;
+            margin: auto;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 400px;
+            opacity: 0.7;
+            border-radius: 0 50% 0 50%;
+        }
+        .border-img{
+            width: 500px;
+            height: 400px;
+            margin: 40px auto;
+            background-color: yellowgreen;
+            overflow: hidden;
+            /* menambahkan overflow agar gambar tidak keluar dari dalam border */
+            border-radius: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Border Radius</h1>
+    <div class="border-radius">
+        Salis Nizar Qomaruzaman
+    </div>
+    <div class="border-img">
+        <img src="../img/photos.jpg" alt="">
+    </div>
+</body>
+</html>

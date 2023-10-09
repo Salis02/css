@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        .sintaks{
+            margin: 30px auto;
+            width: 300px;
+            background-color: black;
+            color: white;
+            height: 50px;
+            text-align: center;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px 0px;
+            transition: .5s;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .sintaks:hover{
+            background-color: white;
+            color: black;
+            box-shadow: -10px 10px 5px darkgreen, 10px -10px 5px darkred;
+        }
+        .penjelasan div{
+            display: inline-block;
+            margin-right: 40px;
+        }
+        .scale{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 10px;
+            transition: .5s;
+            line-height: 100px;
+        }
+        .scale:hover{
+            transform: scale(1.1, 1.3);
+        }
+        .rotate{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 0px 30px;
+            transition: .5s;
+            line-height: 100px;
+        }
+        .rotate:hover{
+            transform: rotate(90deg);
+        }
+        .skew{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 30px;
+            transition: .5s;
+            line-height: 100px;
+        }
+        .skew:hover{
+            transform: skew(15deg, 5deg);
+            box-shadow: 10px -10px 5px rgba(160, 142, 10, 0.685);
+        }
+        .translate{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            text-align: center;
+            border-radius: 0px 30px;
+            transition: .5s;
+            line-height: 100px;
+        }
+        .translate:hover{
+            transform: translate(10px, 10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="judul">
+        <h1>Transformasi</h1>
+        <p>Properti <b>transform</b> memungkinkan kita dapat <b>memanipulasi format visual</b> dari elemen HTML. Ada dua jenis, 2D dan 3D<br>
+        <div class="sintaks">
+            transform : /fungsi/ ;
+        </div><br>
+        Funsi yang dapat kita gunakan :<br>
+        <ul>
+            <li><b>scale | angka </b></li>
+            <li><b>scaleX | angka </b></li>
+            <li><b>scaleY | angka </b></li>
+            <li><b>rotate | deg </b></li>
+            <li><b>rotateX | deg </b></li>
+            <li><b>rotateY | deg </b></li>
+            <li><b>skew | deg </b></li>
+            <li><b>skewX | deg </b></li>
+            <li><b>skewY | deg </b></li>
+            <li><b>translate | px </b></li>
+            <li><b>translateX | px </b></li>
+            <li><b>translateY | px </b></li>
+        </ul>
+        </p>
+    </div>
+    <div class="penjelasan">
+        KOTAK PENJELASAN<br>
+        <div class="scale">
+            scale (memperbesar)
+        </div>
+        <div class="rotate">
+            rotate (memutar)
+        </div>
+        <div class="skew">
+            skew (memiringkan)
+        </div>
+        <div class="translate">
+            translate (memposisi)
+        </div>
+    </div>
+</body>
+</html>

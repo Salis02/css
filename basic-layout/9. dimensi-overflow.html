@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensi dan Overflow</title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: small;
+        }
+        .width-height li{
+            display: inline;
+            margin-right: 20px;
+        }
+        .px{
+            width: 300px;
+            height: 50px;
+            background-color: lightsalmon;
+        }
+        .percent{
+            width: 700px;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+        .percent-child{
+            width: 50%;
+            height: 50%;
+            background-color: brown;
+        }
+        .auto{
+            width: 300px;
+            height: 100px;
+            background-color: darkcyan;
+            overflow: auto;
+        }
+        .hidden{
+            width: 400px;
+            height: 200px;
+            background-color: lightslategray;
+            overflow: hidden;
+        }
+        .scroll{
+            width: 300px;
+            height: 350px;
+            background-color: aquamarine;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dimensi</h1>
+    <p>Kita akan mempelajari tentang dimensi</p>
+    <ul class="width-heigth">
+        <li><b>Width</b></li>
+        <li><b>Height</b></li>
+        <p>
+            px (absolut)<br>
+            <div class="px">Salis Nizar Qomaruzaman<br>Nilai width = 300px dan height-nya = 50px</div><hr>
+
+            % (relatif dengan parent atau pembungkusnya)<br><br>
+            <div class="percent">Salis Nizar Qomaruzaman<br>
+                Memiliki nilai width = 300px dan height-nya = 100px
+                <div class="percent-child">Memiliki nilai width dan height-nya 50% dari nilai parent-nya/pembungkus </div>
+            </div>
+
+            in, cm, mm, pt/point, pc (ukuran dunia nyata)
+        </p>
+    </ul>
+    <h1>Oveflow</h1>
+    <ul>
+        <li>Visible => value default, jika ada content keluar dari parentnya maka contentnya akan diperlihatkan</li>
+        <li>Auto => menambahkan scroll ketika contentnya sudah tidak cukup lagi<br>
+            <div  class="auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nobis est omnis, ratione accusantium nihil necessitatibus ex doloremque ab adipisci qui modi accusamus alias nam ducimus reiciendis nostrum fuga laboriosam mollitia voluptatum non neque. Ex, id eius consectetur iste, ipsa fugit quam nihil maiores vitae nam sed, aliquid quae corrupti tenetur officia! Architecto, consequatur, laudantium distinctio eligendi perspiciatis quibusdam laboriosam delectus provident corporis quos in consequuntur id vel, placeat atque maiores pariatur porro recusandae iure cupiditate doloremque beatae nisi. Quaerat quod neque aut at aliquid doloribus saepe qui id repellendus, fuga ullam et, sapiente dolorum ut dolores ea ad ipsum.</div>
+        </li><br><br>
+        <li>Hidden => content yang keluar dari parent-nya akan disembunyikan
+            <div class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus maxime aspernatur reiciendis blanditiis neque? Sit voluptatibus architecto non et error harum magni eos recusandae repellat ipsum ex, incidunt explicabo deserunt accusantium id sunt modi, quis obcaecati earum iste. Iusto enim tempora ipsam deserunt odit nobis ea sed eius numquam aperiam, repudiandae velit neque corporis, nihil expedita dolores in natus consequatur. Iure illum ipsa, id velit deserunt deleniti officiis voluptates perspiciatis consequatur ea commodi dignissimos quia illo neque sunt quam natus quibusdam quae aliquid. Sequi mollitia dolor architecto autem. Sed corrupti ipsa ullam ratione voluptate quam ipsam vero necessitatibus sapiente labore!</div>
+        </li><br>
+        <li>Scroll => hampir sama dengan <b>'auto'</b> namun tetap menampilkan scrollnya<br><br>
+            <div class="scroll">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quibusdam beatae quod mollitia. Animi assumenda recusandae non molestiae accusamus, veniam eos nam cum minus aliquid, ut placeat rerum iusto voluptatum sequi ipsam a, quia fugiat deleniti. Eaque natus quibusdam, officia corporis non explicabo et laudantium ut consectetur enim fugit neque vel nostrum doloribus optio. Commodi illo amet ad quas iure! Adipisci, odit dolorem? Incidunt inventore dolorum fuga minus quam culpa veritatis, consectetur assumenda modi omnis velit, illo hic nihil placeat repellendus in obcaecati nulla recusandae voluptatum sunt. Hic dolores minima delectus nulla quae illum sint voluptas itaque at. Facere, nesciunt?</div>
+        </li>
+    </ul>
+
+</body>
+</html>

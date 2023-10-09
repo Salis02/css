@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body{
+            background-image: url(./double-bubble-dark.png);
+            text-align: justify;
+        }
+        .materi h1{
+            text-align: center;
+        }
+        .kotak1{
+            margin:  auto;
+            width: 100px;
+            height: 100px;
+            background-color: saddlebrown;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+        }
+        .kotak2{
+            margin: auto;
+            width: 300px;
+            height: 100px;
+            background-color: slateblue;
+            text-align: center;
+            font-size: 15px;
+            position: relative;
+            top: 30px;
+            right: 20px;
+        }
+        .kotak3{
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            font-size: 40px;
+        }
+        .absolute-parent{
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            margin: auto;
+            position: relative;
+        }
+        .absolute1{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            text-align: center;
+        }
+        .absolute2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        .absolute3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .fixed{
+            width: 100%;
+            height: 50px;
+            background-color: rgba(255, 99, 71, 0.358);
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="materi">
+        <h1><b>CSS Position</b></h1>
+        <p>Dalam materi kita sebelumnya, terutama margin, ketika kita akan memindahkan sebuah elemen ke bawah/atas, elemen dibawahnya akan ikut berpindah. Karena masalah itulah kita memerlukan sebuah properti CSS yang namanya <b>Position</b>, dimana kita bisa memindahakan elemen tanpa mempengaruhi elemen disekitarnya</p>
+        <p>Ada 4 value yang bisa kita gunakan dalam properti Position
+            <ul><b>Static</b> (nilai default)<br>
+                <p><b>static</b> adalah nilai default dari setiap elemen yang tidak diberi properti position.<br>Menggunakan position selain <b>static</b> (non-static), akan membuat sebuah elemen seolah berbeda dimensi dari elemen lainnya.<br>Elemen yang diberi <b>position</b> selain <b>static</b> dapat menggunakan properti <b>top, left, bottom, right</b> untuk mengatur posisinya</p></ul>
+            
+            <ul><b>Relative</b><br>
+                <p>Ketika kita menggunakan elemen dengan posisi <b>relative</b> (menggunakan properti <b>top, left, right, bottom</b>), ruang yang ditempati oleh elemen tersebut masih ada, maju satu dimensi<br>
+                Ketika menggerakkan elemen dengan posisi <b>relative</b>, elemen akan bergerak <b>relatif terhadap posisi semulanya</b><br>
+                Jika diberi properti <b>top :0; left :0;</b> maka elemen tidak berubah dari posisinya. Berikut penggunaannya : <br>
+                </p>
+            </ul>
+                <div class="kotak1">1</div>
+                <div class="kotak2"><p>2<br>Kotak 2 diberi properti position relatif (top :30px; right : 20px) namun agak berlawanan arah nggak sih pindahnya</p></div>
+                <div class="kotak3">3</div>
+            <ul><b>Absolute</b><br>
+                <p>Ketika kita menggerakkan elemen dengan posisi <b>absolute</b> (menggunakan) properti <b>top, left, bottom, right</b>, ruang yang sebelumnya ditempati oleh elemen tersebut dianggap tidak ada</p>
+                <p>Ketika kita menggerakkan elemen dengan posisi <b>absolute</b>, elemen akan bergerak relatif terhadap posisi dari elemen parentnya, <b>selama elemen parentnya memiliki posisi yang non-static juga</b><br>
+            <p>Jika kita memberi properti <b>top : 0 ; left : 0 ;</b>, maka elemen akan berada di ujung kiri atas elemen parentnya
+            </p>
+                </p>
+                <div class="absolute-parent">
+                    <div class="absolute1">1</div>
+                    <div class="absolute2">2</div>
+                    <div class="absolute3">3</div>
+                </div>
+            </ul>
+            <ul><b>Fixed</b>
+                <p>Perilaku dari position <b>fixed</b>, ketika kita memberikan properti <b>top, left, bottom, right</b> maka ia akan selalu bergerak relative terhadap elemen windownya</p>
+                <p>Ketika kita scroll, elemen yang diberi position <b>fixed</b>, elemen tersebut akan selalu berada di posisinya. Hal ini sering digunakan oleh para web developer untuk membuat navigasi, agar selalu tampil ketika user melakukan scroll di website</p>
+                <div class="fixed">fixed!</div>
+            </ul>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class</title>
+    <style>
+        .ol{
+            line-height: 25px;
+        }
+        .link a{
+            color: orange;
+        }
+        .hover a:hover{
+            background-color: darkgreen;
+            color: lightsalmon;
+        }
+        .active a:active{
+            color: rgb(225, 233, 79);
+            background-color: brown;
+        }
+        .visited a:visited{
+            color: lightblue;
+        }
+        .first-child ul li:first-child a{
+            color: darkred;
+        }
+        .last-child ul p:last-child {
+            color: brown;
+        }
+        .nth-child ul a:nth-child(2n+2){
+            color: darkgoldenrod;
+        }
+        .nth-child ul a:nth-child(2n+2):hover{
+            color: lightblue;
+        }
+        /* .nth-child ul p:nth-child(2n+1){
+            color: darkgoldenrod;
+        } */
+        .first-of-type p:first-of-type:hover {
+            background-color: lightcoral;
+            color: greenyellow;
+        }
+        .last-of-type p:last-of-type:hover{
+            background-color: yellow;
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Pseudo Class</h1>
+    <p style="text-align:center; background-color: yellow; color: black;">Pseudo Class merupakan kelas semu yang dimiliki oleh sebuah element HTML yang membuat kita dapat mendefiniskan style pada 'Keadaan Tertentu' dari elemen tersebut."</p>
+    <h3>Pseudo-class yang berhubungan dengan link</h3>
+    <ol class="ol">
+        <li class="link">
+            :link
+            -> style default pada sebuah link (a yang ber-href)<br>
+            <a href="#">Pseudo-class dengan :link</a>
+        </li>
+        <li class="hover">
+            :hover
+            -> style ketika kursor/mouse berada diatas sebuah link/elemen <br>
+            <a href="#">Pseudo-class dengan :hover</a>
+        </li>
+        <li class="active">
+            :active
+            -> style ketika sebuah link di-klik (keadaan aktif)<br>
+            <a href="1. font-styling.html">Pseudo-class dengan :active</a>
+        </li>
+        <li class="visited">
+            :visited
+            -> style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang sama)<br>
+            <a href="2. text-styling.html">Pseudo-class dengan :visited</a>
+        </li>
+    </ol>
+    <h3>Pseudo-class yang berhubungan dengan posisi elemen</h3>
+    <ol>
+        <li class="first-child">:first-child<br> -> memilih elemen pertama dari sebuah parent (elemen pembungkusnya)<br>
+            <p>Contoh :<br>
+            <p>Mengganti warna link elemen pertama</p></p>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+                <li><a href="#">Link 6</a></li>
+                <li><a href="#">Link 7</a></li>
+                <li><a href="#">Link 8</a></li>
+                <li><a href="#">Link 9</a></li>
+                <li><a href="#">Link 10</a></li><br>
+            </ul>
+        </li>
+        <li class="last-child">:last-child<br> -> memilih elemen terakhir dari sebuah parent (elemen pembungkusnya)<br>
+            <p>Contoh :<br>
+                <p>Mengganti warna link elemen terakhir</p></p>
+                <ul>
+                    <p>Elemen 1</p>
+                    <p>Elemen 2</p>
+                    <p>Elemen 3</p>
+                    <p>Elemen 4</p>
+                    <p>Elemen 5</p>
+                    <p>Elemen 6</p>
+                    <p>Elemen 7</p>
+                    <p>Elemen 8</p>
+                    <p>Elemen 9</p>
+                    <p>Elemen 10</p>
+                </ul>
+        </li>
+        <li class="nth-child">:nth-child(n)<br> -> memilih elemen ke-n dari sebuah parent (elemen pembungkusnya). n bisa berarti urutan (1),(2).... atau pola (2n), (3n+2), (4n-1) atau ganjil (even) dan genap (odd)<br>
+            <p>Contoh :<br>
+                <p>Mengganti warna link elemen genap</p></p>
+                <ul>
+                    <li>
+                        <a href="#">Elemen 1</a>
+                        <a href="#">Elemen 2</a>
+                        <a href="#">Elemen 3</a>
+                        <a href="#">Elemen 4</a>
+                        <a href="#">Elemen 5</a>
+                        <a href="#">Elemen 6</a>
+                        <a href="#">Elemen 7</a>
+                        <a href="#">Elemen 8</a>
+                        <a href="#">Elemen 9</a>
+                        <a href="#">Elemen 10</a>
+                    </li>
+                </ul>
+        </li>
+        <li class="first-of-type">:first-of-type<br> -> memilih elemen pertama dari sebuah tag
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id itaque enim odio dolore dignissimos ratione deserunt reprehenderit tempora labore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id itaque enim odio dolore dignissimos ratione deserunt reprehenderit tempora labore.</p>
+        </li>
+        <li class="last-of-type">:last-of-type<br> -> memilih elemen terakhir dari sebuah tag
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id itaque enim odio dolore dignissimos ratione deserunt reprehenderit tempora labore.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus id itaque enim odio dolore dignissimos ratione deserunt reprehenderit tempora labore.</p>
+        </li>
+    </ol>
+
+</body>
+</html>

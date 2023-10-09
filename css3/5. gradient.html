@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        span{
+            background-color: yellow;
+        }
+        .sintaks{
+            background-color: rgb(32, 32, 81);
+            color: white;
+            font-size: 25px;
+        }
+        .sintaks1{
+            background-color: rgb(32, 32, 81);
+            color: white;
+            font-size: 25px;
+        }
+        .container{
+            width: 1000px;
+            height: 350px;
+            border: 5px solid yellow;
+        }
+        .contoh{
+            margin: 50px 30px;
+            float: left;
+            width: 300px;
+            height: 250px;
+            background-image: linear-gradient( 90deg, red, rgb(225, 0, 255), rgb(255, 174, 0));
+            border-radius: 20px;
+            transition: .5s;
+        }
+        .contoh:hover{
+            margin-top: 35px;
+            box-shadow: 0px 30px 10px rgba(155, 37, 37, 0.626), 0px -30px 10px rgba(98, 155, 37, 0.626);
+        }
+        .contoh1{
+            float: right;
+            margin: 50px 30px;
+            width: 300px;
+            height: 250px;
+            background-image: linear-gradient( to left top, red, orange, salmon);
+            border-radius: 20px;
+            transition: .5s;
+        }
+        .contoh1:hover{
+            margin-top: 35px;
+            box-shadow: 30px -30px 10px rgba(155, 37, 37, 0.626), -30px 30px 10px rgba(98, 155, 37, 0.626);
+        }
+        .color-stop{
+            width: 500px;
+            height: 250px;
+            background-image: linear-gradient(to left bottom, salmon 40%, yellow 20%);
+        }
+    </style>
+</head>
+<body>
+    <div class="materi">
+        <h1>Gradient</h1>
+        <p>Digunakan untuk memberikan warna Gradient (gradasi) pada elemen yang kita punya.<br>
+        1. <b>Linear gradient</b>, memberikan warna gradasi secara garis lurus<br>
+        2. <b>Linear gradient</b>, memberikan warna gradasi secara lingkaran<br>
+        </p>
+    </div>
+    <div class="rincian">
+        <p>
+        <b>Linear Gradient</b><br>
+            <span>Bukan merupakan property CSS#, melainkan value untuk background-image. Kenapa background-image? Dan mengapa bukan background-color? Karena supaya kita bisa menggunakan keduanya secara bersamaan. Bisa lebih dari dua warna</span><br>Sintaks sederhananya :
+            <div class="sintaks">background-image : linear-gradient ((warna-awal), (warna-akhir)) ;</div>
+        <br>
+            Sintaks lengkapnya :
+            <div class="sintaks1">
+                background :
+                 linear-gradient (sudut | arah, warna1, warna2,....warna(n))
+            </div><br>
+            <ul>
+                <li><b>Sudut</b><br>
+                    Pemberian value sudut menggunakan deg (degree). Misal 90 deg = 90 derajat
+                </li>
+                <li><b>Arah</b><br>
+                    Secara<br> non-diagonal | Diagonal<br>
+                    to bottom | to left top<br>
+                    to top | to left bottom <br>
+                    to left | to right top<br>
+                    to right | to right bottom<br>
+                </li>
+            </ul>
+    </p>
+    </div>
+    <div class="container">
+        <div class="contoh">
+            
+        </div>
+        <div class="contoh1">
+
+        </div> 
+    </div><hr>
+    <b>COLOR STOP</b><br>
+    => Utk megatur kadar persentase warna dalam sebuah elemen
+    <div class="color-stop"></div>
+</body>
+</html>

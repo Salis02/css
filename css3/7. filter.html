@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        .sintaks{
+            background-color: darkblue;
+            margin: auto;
+            color: white;
+            width: 300px;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .sintaks:hover{
+            background-color: yellow;
+            color: black;
+            box-shadow: 0px 10px 5px darkblue;
+        }
+        li{
+            list-style: none;
+        }
+        .rincian{
+            position: relative;
+            width: 700px;
+            margin: auto;
+        }
+        .blur{
+            position: relative;
+            left: 40px;
+            filter: blur(3px);
+            border-radius: 10px;
+        }
+        .brightness{
+            margin-top: 10px;
+            filter: brightness(1.5); /* ini artinya 150%, dan tidak bisa negatif*/
+        }
+        .hue-rotate{
+            filter: hue-rotate(100deg);
+        }
+        .invert{
+            filter: invert(100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="judul-materi">
+        <h1>Filter</h1>
+        <p>Properti CSS3 yang digunakan untuk memberikan efek visual pada gambar, background, atau border. Filter juga memperlukan vendor prefix agar bisa berjalan di berbagai jenis browser<br>
+        Cara penulisannya : <br>
+        <div class="sintaks">
+            <p><b>filter : /tipe filter */</b></p>
+        </div>
+        </p>
+        <!--  
+            FILTER
+            blur (px)
+            brightness (angka | %)
+            contrast (angka | %)
+            saturate (angka | %)
+            greyscale (angka | %)
+            sepia (angka | %)
+            hue-rotate (deg)
+            invert (angka | %)
+            opacity (angka | %)
+            drop-shadow (sama seperti box-shadow)
+         --> 
+            <p>FILTER<br>
+                blur (px)<br>
+                brightness (angka | %)<br>
+                contrast (angka | %)<br>
+                saturate (angka | %)<br>
+                greyscale (angka | %)<br>
+                sepia (angka | %)<br>
+                hue-rotate (deg)<br>
+                invert (angka | %)<br>
+                opacity (angka | %)<br>
+                drop-shadow (sama seperti box-shadow)<br>
+            </p>
+    </div>
+    <div class="rincian">
+        <img class="blur" src="../img/images.jpg" alt="">
+        <img class="brightness" src="../img/images.jpg" alt="">
+        <img class="hue-rotate" src="../img/images.jpg" alt="">
+        <img class="invert" src="../img/images.jpg" alt="">
+    </div>
+</body>
+</html>

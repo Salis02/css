@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .container{
+            width: 800px;
+            border: 2px solid darkred;
+            padding: 10px;
+            text-align: justify;
+            overflow: auto;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .container1{
+            width: 800px;
+            border: 2px solid darkred;
+            padding: 10px;
+            text-align: justify;
+        }
+        .kotak{
+            width: 50px;
+            height: 50px;
+            background-color: salmon;
+            text-align: center;
+            margin: 5px;
+            line-height: 50px;
+            float: left;
+        }
+        .container2{
+            width: 850px;
+            border: 2px solid darkred;
+            padding: 10px;
+        }
+        .kolom1, .kolom2, .kolom3{
+            margin: 5px;
+        }
+        .kolom1{
+            width: 200px;
+            height: 700px;
+            background-color: orange;
+            text-align: center;
+            font-size: 20px;
+            float: left;
+            box-sizing: border-box;
+        }
+        .kolom2{
+            float: left;
+            box-shadow: border-box;
+            width: 450px;
+            height: 300px;
+            background-color: orangered;
+            text-align: center;
+            font-size: 20px;
+            box-sizing: border-box ;
+        }
+        .kolom3{
+            float: left;
+            box-shadow: border-box;
+            width: 150px;
+            height: 500px;
+            background-color: orangered;
+            text-align: center;
+            font-size: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float</h1>
+    <p>Float merupakan properti pada CSS untuk mengatur posisi sebuah elemen, selain margin dan padding Sebuah elemen dapat dipaksa berada di sebelah kiri atau kanan dari parent/pembungkus-nya dengan menggunakan properti ini. Untuk properti <b>Float</b> memiliki beberapa value, yaitu<br></p>
+    <ul>
+        <li><b>None (nilai default)</b></li>
+        <li><b>Left</b></li>
+        <li><b>Right</b></li>
+    </ul>
+    <p>Perlu diketahui, bahwasanya di proses pembelajaran sebelumnya, kita telah menggunakan sesuatu (perilaku elemen ketika diberi CSS) yang disebut <b>normal-flow</b>. Dan untuk float ia termasuk dengan sesuatu yang dinamakan <b>out-of-flow</b><br>
+    yang bisa dilakukan menggunakan properti float adalah :<br>
+</p>
+<ul>
+    <li><b>text wrapping</b><br>
+        membuat teks mengelilingi gambar/elemen lain
+    </li>
+    <div class="container">
+        <div class="text-wrapping">
+            <img src="./images.jpg" alt="" srcset="">
+            <p><b>Ini adalah contoh text-wrapping dengan float dari img = right/left</p>
+        </div>
+    </div>
+    <li><b>image gallery</b><br>
+        membuat serangkaian gambar menjadi galeri
+    </li>
+    <div class="container1">
+        <div class="kotak">1</div>
+        <div class="kotak">2</div>
+        <div class="kotak">3</div>
+        <div class="kotak">4</div>
+        <div class="kotak">5</div>
+        <div class="kotak">6</div>
+        <div class="kotak">7</div>
+        <div class="kotak">8</div>
+        <div class="kotak">9</div>
+        <div class="kotak">10</div>
+        <div class="kotak">11</div>
+        <div class="kotak">12</div>
+        <div class="kotak">13</div>
+        <div class="kotak">14</div>
+        <div class="kotak">15</div>
+        <div class="kotak">16</div>
+        <div class="kotak">17</div>
+        <div class="kotak">18</div>
+        <div class="kotak">19</div>
+        <div class="kotak">20</div>
+    </div>
+    <li style="margin-top: 120px;"><b>multi-column layout, dll</b><br>
+        membuat halaman memiliki beberapa kolom.<br> <span style="background-color: yellow;">Catatan penting : kita harus selalu melihat ukuran dari parent/pembungkus (container)-nya.</span> 
+    </li>
+    <div class="container2">
+        <div class="kolom1">Kolom 1<br> width :200px ; <br>height : 700px</div>
+        <div class="kolom2">Kolom 1<br> width :450px ; <br>height : 300px</div>
+        <div class="kolom3">Kolom 1<br> width :150px ; <br>height : 500px</div>
+    </div>
+</ul>
+</body>
+</html>

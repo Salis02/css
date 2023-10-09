@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 25px;
+            text-align: justify
+        }
+        .inline a{
+            background-color: yellow;
+        }
+        .inline li{
+            list-style:circle;
+        }
+        .inline-block a{
+            background-color: rgba(103, 109, 120, 0.24);
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 15px;
+        }
+        .block h1, h2, h3, h4, h5, h6 {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display</h1>
+    <p>Tag <b>'div'</b>  dan <b>'span'</b>  tidak memiliki 'arti' apapun, keduanya digunakan untuk mengelompokan tag-tag HTML dan memberikan informasi terhadap tag-tag tersebut. <b>div</b> memiliki properti display <b>block</b> dan <b>span</b> properti displaynya inline. </p>
+    <p>Apa hubungannya dengan display?</p>
+    <p>Setiap tag dalam HTML berada di dalam sebuah kotak. Properti dalam CSS mengatur perilaku dari kotak tersebut.Setiap tag pada HTML memiliki nilai default untuk properti <b>display</b>, tetapi kita juga dapat mengubah perilaku dari tag tersebut dengan mengganti value-nya. </p>
+    <p>Adapun nilai dari poperti <b>display</b> adalah: </p>
+    <ol>
+        <li class="inline">
+            <b>Inline</b>
+            <ul>
+             <li>Elemen HTML yang secara default tidak menambahkan baris baru ketika dibuat</li>
+            <li>Lebar dan tingginya elemen sebesar konten yang ada di dalamnya, sehingga tinggi dan lebarnya tidak dapat diatur dari elemen inline</li>
+            <li><i><b>Margin</b></i> dan <i><b>padding</b></i> hanya mempengaruhi elemen secara horizontal, tidak vertikal </li>
+            </li>
+            <p>Elemen inline<br>
+            b, strong, i, em, a, span, sub, sup, button, input, label, select, textarea,...</p>
+            </ul>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Salis 3</a>
+            <a href="#">Link 4</a>
+           <p>Sesuai isi kontennya</p>
+
+        <li class="inline-block">
+            <b>Inline-block</b>
+            <ul>
+                <li>Tidak ada elemen yang secara default memiliki properti <b>display : Inline-block;</b></li>
+                <li>Harus diubah secara manual</li>
+                <li>Perilaku dasarnya sama seperti elemen inline</li>
+                <li>Bedanya elemen Inline-block dapat kita atur tinggi dan lebarnya</li>
+            </ul>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Salis 3</a>
+            <a href="#">Link 4</a>
+        </li>
+
+        <li class="block"><b>Block</b>
+            <p>Elemen block<br>'h1-h6', 'p', 'ol', 'ul', 'li' , 'form', 'hr' , 'div' .... </p>
+            <ul>
+                <li>Elemen HTML yang secara default menambahkan baris baru ketika dibuat</li>
+                <li>Jika tidak diatur width nya, maka lebar default dari elemen block akan memenuhi lebar browser/parentnya </li>
+                <li>Kita bisa mengatur tinggi dan lebar dari elemen block</li>
+                <li>Di dalam elemen inline blockk, kita dapat menyimpan tag dengan elemen inline, inline-block, atau bahkan elemen block lagi</li>
+            </ul><br>
+            <h1>Salis Nizar Qomaruzaman</h1>
+            <h2>Salis Nizar Qomaruzaman</h2>
+            <h3>Salis Nizar Qomaruzaman</h3>
+            <h4>Salis Nizar Qomaruzaman</h4>
+            <h5>Salis Nizar Qomaruzaman</h5>
+            <h6>Salis Nizar Qomaruzaman</h6>
+        </li>
+        <li><b>None</b></li>
+        <p>Digunakan untuk menghilangkan sebuah elemen</p>
+    </ol>
+    <div class="navbar">
+        <h1>SANQOZ</h1>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portofolio</a>
+            <a href="#">Contact</a>
+    </div>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+    </ul>
+    
+    <div class="content">
+        <h3>Artikel Kami</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est velit quas in suscipit? Non illo quod incidunt ipsam odio aliquid impedit voluptate quae id. Incidunt voluptatum reprehenderit deserunt impedit voluptatibus.</p>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; Salis Nizar Qomaruzaman | All right reserved</p>
+    </div>
+   
+</body>
+</html>

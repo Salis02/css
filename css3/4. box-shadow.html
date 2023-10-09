@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Shadow</title>
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        .box-shadow{
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+            text-align: center;
+            padding: 20px 0px 20px;
+            border-radius: 20px;
+            box-shadow: 5px 7px 10px 0px rgba(0, 0, 0, 0.512);
+        }
+        .spread{
+            margin: 50px auto 50px;
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.641) ;
+        }
+        .hover{
+            margin: 30px auto 20px;
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            transition: .5s;
+        }
+        .hover:hover{
+            margin: 40px auto 50px;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.641), 
+            -10px -10px 0px rgba(95, 12, 189, 0.641)
+            ;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Box-shadow</h1>
+    <p>Memberikan sebuah bayangan pada sebuah elemen.<br> Value yang bisa kita berikan ada empat parameter, yakni <b>x-offset , y-offset, blur, color</b>. Urutannya :  <br>
+    <ul>
+        <li><b>x-offset (wajib)</b>
+            Untuk mengatur bayangan dalam sumbu X (horizontal)
+        </li>
+        <li><b>y-offset (wajib)</b>
+            Untuk mengatur bayangan dalam sumbu Y (vertikal)
+        </li>
+        <li><b>blur (wajib)</b>
+            Seberapa blur bayangan pada sebuah bayangan
+        </li>
+        <li><b>spread (optional)</b>
+            Ukuran dari bayangannya. Nilai positif untuk membuat ukuran lebih besar, dan nilai negatif untuk memperkecil box-shadow, bisa lebih kecil dari box nya
+        </li>
+        <li><b>color (wajib)</b>
+            Memberikan warna bayangannya, biasanya menggunakan RGBa
+        </li>
+        <li><b>inset (optional)</b>
+            Membuat bayangan pindah di dalam box, bukan di luar box
+        </li>
+    </ul>
+    </p>
+    <div class="box-shadow">
+        Box-shadow 
+    </div>
+    <div class="spread">
+        Box-shadow dengan spread (ukuran bayangan), yang bisa membuat sebuah elemen seolah-olah seperti diberi border
+    </div>
+    <div class="hover">
+        Multiple Box-shadow
+    </div>
+</body>
+</html>

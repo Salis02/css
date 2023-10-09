@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-color: blanchedalmond;
+    }
+    .judul{
+        margin-top: 10px;
+        border: 2px solid black;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: yellow;
+    }
+    .kotakanimasi{
+        width: 100px;
+        height: 100px;
+        background-color: darkred;
+        border-radius: 10px;
+        /* menaruh animation disini agar berjalan ketika page pertama kali terbuka*/
+        animation: kotakAnimasi 3s ease-in;
+    }
+    .kotakanimasi:hover{
+        animation: kotakAnimasi 3s ease-in;
+    }
+    @keyframes kotakAnimasi {
+        0%{
+            width: 100px;
+            background-color: darkblue;
+        }
+        50%{
+            width: 300px;
+            height: 100px;
+            background-color: darkorange;
+        }
+        100%{
+            width: 500px;
+            height: 150px;
+            background-color: darkslategray;
+        }
+    }
+    .kotakanimasi1{
+        width: 100px;
+        height: 100px;
+        background-color: darkred;
+        border-radius: 10px;
+        /* animation: kotakanimasi1 2s ease-in infinite; */
+        animation: kotakanimasi1 2s ease-in 5;
+    }
+    @keyframes kotakanimasi1{
+        0%{
+            width: 100px;
+        }
+        100%{
+            width: 300px;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="judul">
+            <h1>Animation</h1>
+            <p>Tidak seperti transition yang hanya memiliki keadaan awal dan akhir, pada animation kita bisa membuat keadaan diantara keduanya, bisa lebih dari satu keadaan</p>
+        </div>
+        <div class="materi">
+            <h2>Penggunaan Animation</h2>
+            <div class="kotakanimasi">
+
+            </div>
+            <p>Nilai yang bisa kita kasihkan ke properti animation</p>
+            <ul>
+                <li>[name]</li>
+                <p>Wajib ada</p>
+                <li>[duration], [delay], [timing-function]</li>
+                <p>Sama seperti transition</p>
+                <li>[iteration-count]</li>
+                <p>Mau berapa kali animation akan diulang <br>angka | infinite</p>
+                <div class="kotakanimasi1"></div>
+                <li>[direction]</li>
+                <p>Cara berjalannya animasi <br>
+                    normal (awal -> akhir)
+                    reverse (akhir -> awal)
+                    alternate (bolak balik -> dimulai dari awal)
+                    alternate-reverse (bolak balik -> dimulai dari akhir)
+                </p>
+                <li>[fill-mode]</li>
+                <p>Menentukan akhir transisi akan seperti apa <br>
+                    none
+                    forwards -> untuk mengakhiri animasi ke keadaan akhir animation
+                    backwards
+                    both
+                </p>
+                <li>[play-state]</li>
+                <p>menentukan jalan tidaknya animasi</p>
+                <p>running <br>
+                </p>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

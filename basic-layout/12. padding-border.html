@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding dan Border</title>
+    <style>
+        .padding{
+            height: 400px;
+            width: 400px;
+            background-color: darkgoldenrod;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+        .padding-ukuran{
+            height: 300px;
+            width: 300px;
+            background-color: lightcoral;
+            margin: 10px auto;
+        }
+        .padding-ukuran1{
+            height: 300px;
+            width: 300px;
+            background-color: lightcoral;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        .border{
+            color: bisque;
+            display: inline-flex;
+            margin: 0px 10px 0px;
+        }
+        .border-solid{
+            height: 300px;
+            width: 300px;
+            background-color: saddlebrown;
+            border: 7px solid yellow;
+        }
+        .border-dotted{
+            height: 300px;
+            width: 300px;
+            background-color: saddlebrown;
+            border: 7px dotted yellow;
+        }
+        .border-dashed{
+            height: 300px;
+            width: 300px;
+            background-color: saddlebrown;
+            border: 7px dashed yellow;
+        }
+        .border-double{
+            height: 300px;
+            width: 300px;
+            background-color: saddlebrown;
+            border: 7px double yellow;
+        }
+        .box-sizing{
+            width: 600px;
+            margin: 10px auto;
+            box-sizing: border-box;
+        }
+        .satu{
+            background-color: salmon;
+            padding: 20px;
+            border: 50px solid black;
+        }
+        .dua{
+            background-color: lightsalmon;
+            margin-top: 10px;
+            padding: 10px;
+            border: 20px dotted darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Padding</h1>
+    <p>Merupakan area transparan di dalam kotak (content dengan border). Aturan penulisan value sama dengan margin termasuk CSS Shorthandnya<br>Perbedaannya :
+    <ul>
+        <li>Padding tidak bisa diberi nilai negatif</li>
+        <li>Padding tidak bisa diberi nilai auto</li>
+        <li>Padding menambahkan ukuran elemen</li>
+    </ul>
+    </p>
+    <div class="padding">Di dalam kotak ini diberi nilai paddingnya 10px (atas/bawah kanan/kiri = 10px)</div>
+    <div class="padding-ukuran">Kita set height dan widthnya 300px, namun ketika kita tulis value padding maka akan bertambah nilainya. <br><b>Ini sebelum diberi value padding</b></div>
+    <div class="padding-ukuran1">Kita set height dan widthnya 300px, namun ketika kita tulis value padding maka akan bertambah nilainya.<br> <b>Ini setelah diberi value padding</b></div>
+    <h1>Border</h1>
+    <p>Batas keliling content dan padding. Border juga menambah ukuran elemennya<br>Penulisannya :<br>
+    <b style="background-color: yellow;">border : width style color</b></p>
+    <div class="border">
+        <div class="border-solid">Ini adalah kotak yang diberi value<br> border : 7px solid yellow</div>
+        <div class="border-dotted">Ini adalah kotak yang diberi value<br> border : 7px dotted yellow</div>
+        <div class="border-dashed">Ini adalah kotak yang diberi value<br> border : 7px dashed yellow</div>
+        <div class="border-double">Ini adalah kotak yang diberi value<br> border : 7px double yellow</div>
+    </div>
+    <h1>Box Sizing</h1>
+    <p>Biasanya untuk mengatur ukuran width dari sebuah box agar tidak berubah-ubah nilainya ketika ditambahkan padding/border </p>
+    <div class="box-sizing">
+        <div class="satu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid asperiores repellat numquam animi inventore velit autem officiis molestias cupiditate reiciendis id at sapiente, explicabo ea deleniti quo praesentium quos similique.</div>
+        <div class="dua">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis dicta numquam voluptatum maxime illum fugit distinctio voluptatibus! Numquam eveniet sit, ad eligendi fuga nam optio odit adipisci officia aliquid harum!</div>
+    </div>
+    <footer>Total dimensi = height/width + padding + border</footer>
+</body>
+</html>

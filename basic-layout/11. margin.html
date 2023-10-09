@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+    <style>
+        .besar{
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            margin-bottom: 70px;
+        }
+        .sedang{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            margin-top: 50px;
+        }
+        .kecil{
+            width: 50px;
+            height: 50px;
+            background-color: lightsalmon;
+        }
+        .horizontal div{
+            display: inline-block;
+        }
+        .satu{
+            width: 200px;
+            height: 200px;
+            background-color: limegreen;
+            margin-right: 30px;
+        }
+        .dua{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            margin-left: 10px;
+        }
+        .tiga{
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+        }
+        .negatif-margin div{
+            display: block;
+        }
+        .minus{
+            width: 500px;
+            height: 500px;
+            background-color: darkgoldenrod;
+        }
+        .min{
+            width: 250px;
+            height: 250px;
+            background-color: darkorange;
+            margin-left: -10px;
+            margin-top: 30px;
+        }
+        .minuse{
+            width: 150px;
+            height: 150px;
+            background-color: darksalmon;
+            overflow: auto;
+        }
+        .auto{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .auto1{
+            height: 150px;
+            width: 150px;
+            background-color: darkcyan;
+            margin: 0px auto 0px;
+        }
+        .auto2{
+            height: 100px;
+            width: 100px;
+            background-color: darkorchid;
+            margin: 0px auto 0px;
+            overflow: scroll;
+        }
+        .satu-nilai{
+            height: 400px;
+            width: 400px;
+            background-color: chocolate;
+            margin: 50px;
+        }
+        .dua-nilai{
+            height: 300px;
+            width: 300px;
+            background-color: tomato;
+            margin: 40px auto;
+        }
+        .tiga-nilai{
+            height: 200px;
+            width: 200px;
+            background-color: blanchedalmond;
+            margin: 30px auto 30px;
+        }
+        .empat-nilai{
+            height: 300px;
+            width: 300px;
+            background-color: yellow;
+            margin: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Margin</h1>
+    <h2>Overlapping Margin</h2>
+    <ul>
+        <li>Margin tidak saling menambahkan khusus untuk vertikal</li>
+        <li>Margin yang diambil secara vertikal adalah margin yang paling besar ukurannya, yang lebih kecil akan ditimpa</li>
+        <div class="vertikal">
+            <div class="besar">Big Box<br>Diberi margin-bottom = 70px</div>
+            <div class="sedang">Medium Box<br>Diberi margin-top 50px</div>
+            <div class="kecil">Small Box</div>
+            <p>Margin medium box ditimpa oleh margin big box karena nilainya lebih kecil</p>
+        </div>
+
+        <li>Sedangkan secara horizontal, akan dijumlahkan kedua-duanya</li>
+        <div class="horizontal">
+            <div class="satu">Kotak satu<br>Diberi margin-right 30px</div><div class="dua">Kotak dua diberi margin-left 10px</div><div class="tiga">Kotak tiga</div>
+            <p>Total jaraknya = kotak 1 (30px) + kotak 2 (10px) = 50px</p>
+        </div>
+    </ul>
+    <h2>Negatif Margin</h2>
+    <p>Negatif margin akan membuat kotaknya bergerak berlawanan arah, ketika value setelahnya dideklarasikan. Biasanya digunakan untuk menyembunyikan suatu konten/elemen</p>
+    <div class="negatif-margin">
+        <div class="minus">Minus</div>
+        <div class="min">Min<br>Min diberi sebuah nilai margin-top = -70px<br>Kemudian diberikan margin-left = 40px<br>Seharusnya Min akan geser kekiri, namun karena diberi nilai margin-top negatif maka gesernya berlawanan arah</div>
+        <div class="minuse">Minuse<br>Perhatikan dengan seksama bahwa minuse ikut naik hanya ketika nilai margin Min diberikan secara vertikal, namun ketika horizontal ia tetap pada tempatnya</div>
+    </div>
+    <h2>Auto</h2>
+    <p>Auto akan membuat elemen ditengah-tengah parentnya, dan ingat kita harus menggunakan kedua margin-left dan margin-left nya dengan nilai auto yang sama</p>
+    <div class="auto-margin">
+        <div class="auto">Kotak margin auto<br>Nilai yang diberikan : <br>margin-right: auto;
+            margin-left: auto;</div>
+        <div class="auto1">Kotak margin auto1<br>Nilai yang diberikan : <br>margin: 0px auto 0px</div>
+        <div class="auto2">Kotak margin auto2<br>Nilai yang diberikan : <br>margin: 0px auto 0px</div>
+    </div>
+    <h2>Shorthand</h2>
+    <p>Dalam CSS Margin Shorthand, kita bisa mengisi value nya dengan :</p>
+    <ol>
+        <li>Satu nilai</li>
+        <div class="satu-nilai">Shorthand 1 nilai<br>Diberikan value :<br>margin: 50px (atas/bawah/kanan/kiri = 50px)</div>
+        <li>Dua nilai</li>
+        <div class="dua-nilai">Shorthand 2 nilai<br>Diberikan value :<br>margin: 40px auto (atas/bawah = 40px; kiri/kanan : auto)</div>
+        <li>Tiga nilai</li>
+        <div class="tiga-nilai">Shorthand 3 nilai<br>Diberikan value :<br> margin: 30px auto 30px; (atas = 30px; kanan/kiri = auto ; bawah = 30px)</div>
+        <li>Empat nilai</li>
+        <div class="empat-nilai">Shorthand 4 nilai<br>Diberikan value :<br>margin: 10px 20px 30px 40px (searah dengan jarum jam = atas -> kanan -> bawah -> kiri)</div>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opacity</title>
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        .materi-opacity{
+            display: inline-block;
+            margin: auto;
+            width: 100%;
+            height: 200px;
+            background-color: darkkhaki;
+            color: black;
+            text-align: center;
+            border-radius: 80px 80px 0px 80px;
+            padding: 10px 50px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+        .opacity{
+            margin: auto;
+            border-radius: 30%;
+            width: 500px;
+            height: 500px;
+            background-color: salmon;
+            overflow: auto;
+            text-align: center;
+            padding: 50px;
+            box-sizing: border-box;
+            position: relative;
+            opacity: 0.8;
+        }
+        .child-opacity{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background-color: brown;
+            border-radius: 20%;
+            overflow: auto;
+            box-sizing: border-box;
+            padding: 50px 10px;
+            position: absolute;
+            left: 30px;
+            bottom: 40px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="materi-opacity">
+        <h1>Opacity</h1>
+        <p>Mengatur transparansi dari sebuah elemen.<br>Kita bisa menggunakan properti CSS3 <b>opacity</b> dengan value <b>0</b> sampai dengan <b>9</b>. 0.25 bisa diganti dengan .25 dalam mengisikan value. Penggunaan <b>opacity</b> harus selalu memperhatikan child-nya karena opacity parent-nya diwariskan</p>
+    </div>
+    <div class="opacity">
+        Ini adalah parent opacity<br>diberikan opacity .8
+        <div class="child-opacity">Ini adalah child opacity. Meskipun diberikan opacity <b>1</b> child-opacity tetap diwarisi opacity dari parentnya</div>
+    </div>
+</body>
+</html>

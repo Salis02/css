@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-shadow</title>
+    <style>
+        body{
+            background-color: #292960;
+            opacity: 0.8;
+            background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #292960 25%);
+            background-position:  9px 0, 9px 0, 0 0, 0 0;
+            background-size: 9px 9px;
+            background-repeat: repeat;
+            color: white;
+        }
+        span{
+            margin:10px auto;
+            display: inline-block;
+            background-color: lightcoral;
+            border-radius: 20px;
+            overflow: auto;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 500px;
+            height: 50px;
+            transition: .5s;
+        }
+        span:hover{
+            background-color: yellow;
+            color: black;
+        }
+        .praktek{
+            font-size: 50px;
+            text-align: center;
+            transition: .5s;
+        }
+        .praktek:hover{
+            text-shadow: 0px 10px 5px yellow, 0px -10px 5px lightcoral;
+        }
+        .nizar{
+            margin: 30px;
+            font-size: 50px;
+            text-align: center;
+            transition: .7s;
+        }
+        .nizar:hover{
+            text-shadow: -130px 0px 5px salmon, 130px 0px 5px darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="judul">
+        <h1><b>Text-shadow</b></h1>
+        <p>Value dari <b>text-shadow</b> sama dengan box-shadow. Yang membedakan ialah value inset dan spread tidak ada. <br>Jadi sintaksnya:<br>
+            <span>text-shadow : x-offset, y-offset, blur, color</span>
+        </p>
+    </div>
+    <div class="praktek">
+        Salis Nizar Q
+    </div>
+    <div class="nizar">
+        Nizar
+    </div>
+</body>
+</html>

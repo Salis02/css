@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url(../img/double-bubble-dark.png);
+        }
+        .sintaks{
+            text-align: center;
+            background-color: lightcyan;
+            width: 50%;
+            height: 50px;
+            margin: auto;
+            color: darkcyan;
+            border-radius: 10px;
+            transition: .6s;
+        }
+        .sintaks:hover{
+            transform: scale(1.1);
+        }
+        .penjelasan{
+            margin-top: 30px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px 0px;
+            background-color: bisque;
+            border: 2px solid lightcoral;
+            
+        }
+        .pembungkus-fungsi{
+            height: 500px;
+            width: 90%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .ease{
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 10px;
+            background-color: seagreen;
+            text-align: center;
+            transition: 1.5s;
+        }
+        .pembungkus-fungsi:hover .ease{
+            margin-left: 85% ;
+        }
+        .ease-in{
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background-color: darkviolet;
+            text-align: center;
+            transition: 1.5s ease-in;
+        }
+        .pembungkus-fungsi:hover .ease-in{
+            margin-left: 85% ;
+        }
+        .ease-out{
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background-color: sandybrown;
+            text-align: center;
+            transition: 1.5s ease-out;
+        }
+        .pembungkus-fungsi:hover .ease-out{
+            margin-left: 85% ;
+        }
+        .ease-in-out{
+            font-size: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background-color: skyblue;
+            text-align: center;
+            transition: 1.5s ease-in-out;
+        }
+        .pembungkus-fungsi:hover .ease-in-out{
+            margin-left: 85% ;
+        }
+        .linear{
+            border-radius: 10px;
+            margin-top: 10px;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            background-color: darkkhaki;
+            text-align: center;
+            transition: 1.5s linear;
+        }
+        .pembungkus-fungsi:hover .linear{
+            margin-left: 85% ;
+        }
+        .cubic-bezier{
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+            width: 80px;
+            height: 70px;
+            line-height: 70px;
+            background-color: lightseagreen;
+            text-align: center;
+            transition: 1.5s cubic-bezier(0.26,-0.41, 0.57, 1.66);
+        }
+        .pembungkus-fungsi:hover .cubic-bezier{
+            margin-left: 85% ;
+        }
+    </style>
+</head>
+  <body>
+    <div class="container">
+        <div class="materi">
+           <h1 style="text-align: center;">Transition</h1>
+           <p>Properti <b>transition</b> memungkinkan kita dapat mengubah nilai dari properti HTML <b>secara halus</b></p>
+           <p><b>TRANSITION vs ANIMATION</b></p>
+           <table class="table table-warning">
+               <thead>
+                   <tr>
+                   <th scope="col">Aspek</th>
+                   <th scope="col">Transition</th>
+                   <th scope="col">Animation</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                   <td>Kondisi Awal</td>
+                   <td>Hanya ada keadaan awal dan keadaan akhir saja</td>
+                   <td>Terdiri dari beberapa keadaan, bisa lebih dari dua (keyframe)</td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+       <div class="sintaks">
+           Transition :<br>
+           [properti] [<b>durasi</b>] [fungsi] [delay]
+       </div>
+       <div class="penjelasan">
+           <ul>
+               <li class="durasi">
+                   <b>durasi <small>s/ms</small> (wajib)</b><br>
+                   Ditulis pada keadaan awal
+               </li>
+               <li class="properti">
+                   <b>properti</b><br>
+                   Memilih properti apa saja yang akan diberikan sebuah transisi. Nilai default nya <b>all</b>. Valuenya bisa <b>all</b>, <b>nama properti</b>, atau <b>none</b>. Ada beberapa non-animatable properties : <br>
+                   <ul>
+                    <li>font family</li>
+                    <li>display</li>
+                    <li>position</li>
+                    <li>....</li>
+                   </ul>
+                   Animatable properties : <br>
+                   <ul>
+                    <li>background-(color, position, size)</li>
+                    <li>border</li>
+                    <li>filter color</li>
+                    <li>line-height font-size</li>
+                    <li>top left bottom right</li>
+                    <li>margin padding</li>
+                    <li>width height</li>
+                    <li>opacity transform</li>
+                    <li>word-spacing</li>
+                    <li>letter-spacing</li>
+                   </ul>
+               </li>
+               <li class="fungsi">
+                <b>fungsi</b>
+                Disebut juga <i>timing function</i>. Maksudanya pergerakan apa yang akan dilakukan ketika melakukan transisi. Nilainya : <br>
+                <div class="pembungkus-fungsi">
+                    <div class="ease">ease</div>
+                    <div class="ease-in">ease-in</div>
+                    <div class="ease-out">ease-out</div>
+                    <div class="ease-in-out">ease-in-out</div>
+                    <div class="linear">linear</div>
+                    <div class="cubic-bezier">cubic-bezier</div>
+                </div>
+            </li>
+            <li class="delay">
+                <b>delay</b><br>
+                Untuk memberikan delay/waktu tunggu sebelum menjalankan transisi. Sehingga di valuenya ada dua nilai, yang pertama durasi, yang kedua delay
+            </li>
+           </ul>
+       </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>

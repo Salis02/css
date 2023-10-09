@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index</title>
+    <style>
+        body{
+            background-image: url(./double-bubble-dark.png);
+        }
+        .container{
+            width: 100%;
+        }
+        .judul{
+            width: 100%;
+            float: right;
+            width: 50%;
+        }
+        .judul p{
+            background-color: rgb(211, 219, 227);
+            display: inline;
+            line-height: 25px;
+        }
+        .z-index{
+            width: 50%;
+            height: 50%;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .kuning{
+            width: 50%;
+            height: 100px;
+            background-color: yellow;
+            position: absolute;
+            z-index: 999;
+            text-align: right;
+        }
+        .maroon{
+            text-align: right;
+            width: 50%;
+            height: 100px;
+            background-color: maroon;
+            color: white;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            
+        }
+        .grey{
+            text-align: right;
+            width: 50%;
+            height: 100px;
+            background-color: lightgray;
+            position: absolute;
+            top: 100px;
+            left: 100px;z-index: -999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="judul">
+            <h1>Z-Index</h1>
+            <p>Penggunaan <b>Z-Index</b> adalah untuk mengatur tumpukkan dari elemen ketika elemennya <b>non-static</b>.<br> Perhatikan 3 kotak di kiri atas!<br>Kotak grey overlay terhadap kotak marron, dan kotak maroon overlay terhadap kotak kuning. Hal ini dikarenakan baris paling terakhir akan dihitung sebagai overlay paling depan.<br>
+            Jika ingin memajukkan sebuah elemen ke depan maka kita harus menambahkan properti <b>z-index</b> kemudian diisi dengan angka (+/-), makin besar angka positifnya, maka makin kedepan, begitu juga sebaliknya</p>
+        </div>
+        <div class="z-index">
+            <div class="kuning">Kuning</div>
+            <div class="maroon">Maroon</div>
+            <div class="grey">Grey</div>
+       
+        </div>
+    </div>
+</body>
+</html>
