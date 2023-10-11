@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<style>
+        body{
+            background-image: url(/img/double-bubble-dark.png);
+        }
+    img{
+        width: 90%;
+        border-radius: 0px 30px;
+    }
+    span{
+        font-style: italic;
+        color: white;
+        background-color: maroon;
+    }
+    .properti{
+        border: 2px solid darkgoldenrod;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div style="text-align: center;" class="judul">
+            <h1>Flex Box</h1>
+            <p>"Model layout <b>1 dimensi</b> yang dapat mengatur jarak dan penjajaran antar item dalam sebuah container."</p><hr>
+        </div>
+        <div class="materi">
+            <h4><b>
+                1 dimensi?
+            </b></h4>
+            <p>"Hanya dapat mengatur <b>1 dimensi</b> pada saat tertentu, antara baris atau kolom, tidak bisa keduanya sekaligus."</p>
+            <img src="/img/flex-box.png" alt=""><hr>
+            <h5>Istilah pada Flex-Box</h5>
+            <ul>
+                <li>main axis</li><p> => Sumbu utama dari sebuah container yang menentukan urutan dari penempatan items secara horizontal</p>
+                <li>main-start | main-end</li><p> => Mulai dan berakhirnya items yang disimpan di dalam container</p>
+                <li>main size</li><p> => Ukuran (width/height) dari container yang akan membuat dimensi dari itemsnya relatif terhadap main size</p>
+            </ul><hr>
+            <p>Dalam menggunakan properti flexbox, kita harus : <br>
+                <img src="/img/flex-direction.png" alt="">
+            <div class="cont">
+                <p>Displaynya kita ubah: <br><span>display : flex</span><br>
+                    Lalu kita kasih dibawahnya sebuah properti : <br><span>display : flex <br>flex-direction : row | row-reverse | column | column-reverse</span><br>
+                    Flex-direction => mengatur arah/urutan dari items di dalam container. <b>NOTE : flex-direction memaksa elemen dalam satu baris!!!</b>
+                </p>
+            </div><hr>
+            </p>
+            <p>
+                <img src="/img/flex-wrap.png" alt=""><br>
+                Flex-wrap => secara default, semua items di dalam container akan berada pada satu baris meskipun ukurannya sudah tidak cukup, <b>flex-wrap</b> memungkinkan untuk memindahkan items ke baris dibawahnya. <br>
+                Lalu kita kasih dibawahnya sebuah properti : <br><span>display : flex <br>flex-wrap : nowrap | wrap | wrap-reverse</span><br><b>Dengan flex-wrap, kita bisa memindahkan elemen ke baris selanjutnya!!!</b>
+            </p><hr>
+            <p>
+                <img src="/img/justify-content.png" alt="">
+                Perbedaan
+                <table class="table">
+                    <thead>
+                        <td>
+                            <th>space-around</th>
+                            <th>space-between</th>
+                            <th>space-evenly</th>
+                        </td>
+                    </thead>
+                    <tbody>
+                        <td>
+                            <th>membuat elemen di start dan end memiliki jarak setengah dari jaraknya dengan elemen tengah dengan ujung container</th>
+                            <th>membuat elemen start dan end mepet dengan batas container, dan elemen diantaranya ditengah</th>
+                            <th>membuat jarak antara seluruh elemen sama rata kana kiri</th>
+                        </td>
+                    </tbody>
+                </table>
+            </p>
+            <img src="/img/align-items.png" alt=""><hr>
+            <img src="/img/align-content.png" alt=""><hr>
+            <div class="properti">
+                <img src="/img/properti item.png" alt=""><hr>
+                <img src="/img/properti item_align-self.png" alt=""><hr>
+                <img src="/img/properti item_flex-grow.png" alt=""><hr>
+                <img src="/img/properti item_order.png" alt=""><hr>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
