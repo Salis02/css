@@ -1,0 +1,84 @@
+body{
+    background-image: url(/img/double-bubble-dark.png);
+}
+
+/* Latihan 1 - Kolom */
+.container-satu{
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+}
+.kolom-utama{
+    flex: 1;
+    order: 2;
+}
+.sidebar{
+    flex: 1;
+    order: 1;
+}
+.profile{
+    order: 3;
+    flex: 1;
+}
+img{
+    width: 150px;
+    height: 200px;
+}
+/* Akhir Latihan 1 - Kolom */
+
+/* Latihan 2 - Services / Features */
+
+.container-dua{
+    max-width: 100%;
+}
+.layanan{
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.layanan.satu{
+    background-color: lightblue;
+}
+.layanan.dua{
+    background-color: lightgreen;
+}
+.layanan.tiga{
+    background-color: lightcoral;
+}
+
+/* Akhir Latihan 2 - Services / Features */
+
+/* Latihan 3 - Galery Box */
+
+.container-tiga{
+    margin: 10px;
+    display: flex;
+    max-width : 800px;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.thumbnail{
+    width: 20%;
+    margin: 5px;
+}
+.thumbnail img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (min-width : 600px){
+    .container-dua{
+        display: flex;
+        justify-content: space-between;
+    }
+    .layanan{
+        width: 30%;
+    }
+    .thumbnail{
+        width: 25%;
+    }
+}
+
+/* Akhir Latihan 3 - Galery Box */
